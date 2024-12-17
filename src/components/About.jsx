@@ -30,7 +30,7 @@ const About = () => {
             className="px-4 md:px-0"
           >
             <motion.img 
-              src="/src/assets/images/jonito.png" 
+              src="../assets/images/jonito.png" 
               alt="Profile" 
               className="rounded-lg shadow-lg w-full max-w-md mx-auto ring-2 ring-primary/20"
               whileHover={{ scale: 1.02 }}
