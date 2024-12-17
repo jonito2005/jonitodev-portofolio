@@ -4,21 +4,21 @@ const projects = [
   {
     title: "Wibudev Subdomain",
     description: "Wibudev Subdomain adalah sebuah platform yang memungkinkan pengguna untuk mendapatkan subdomain gratis untuk domain mereka. Platform ini memungkinkan pengguna untuk memilih subdomain yang sesuai dengan kebutuhan mereka dan memastikan bahwa subdomain tersebut tersedia dan siap digunakan.",
-    image: "/src/assets/images/subdomain.png",
+    image: "../assets/images/subdomain.png",
     tech: ["Node.js", "Tailwind", "EJS"],
     link: "https://wibudev.moe"
   },
   {
     title: "Wibudev Portfolio",
     description: "Wibudev Portfolio adalah sebuah platform yang memungkinkan pengguna untuk mendapatkan subdomain gratis untuk domain mereka. Platform ini memungkinkan pengguna untuk memilih subdomain yang sesuai dengan kebutuhan mereka dan memastikan bahwa subdomain tersebut tersedia dan siap digunakan.",
-    image: "/src/assets/images/portfolio.png",
+    image: "../assets/images/portfolio.png",
     tech: ["React", "Tailwind", "Framer Motion"],
     link: "https://wibudev.moe"
   },
   {
     title: "Toko Lokal",
     description: "Toko Lokal adalah sebuah platform e-commerce inovatif yang dirancang untuk mendukung UMKM dan pengusaha lokal Indonesia. Website ini memungkinkan pengguna untuk menemukan dan membeli berbagai produk berkualitas dari penjual-penjual lokal terpercaya di seluruh Indonesia, sekaligus mendukung pertumbuhan ekonomi lokal.",
-    image: "/src/assets/images/tokolokal.png",
+    image: "../assets/images/tokolokal.png",
     tech: ["React", "Tailwind", "Framer Motion"],
     link: "https://wibudev.moe"
   }
