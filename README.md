@@ -1,4 +1,5 @@
 # JonitoDev Portfolio
+![screencapture-localhost-5173-2024-12-19-23_38_55](https://github.com/user-attachments/assets/eea41f0c-a5c9-4e69-8826-513498374409)
 
 Portfolio website interaktif yang dibangun dengan React dan GSAP untuk animasi yang menarik.
 
