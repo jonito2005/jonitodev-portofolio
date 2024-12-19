@@ -57,7 +57,7 @@ const About = () => {
             <motion.img 
               src="/images/jonito.png" 
               alt="Profile" 
-              className="rounded-lg shadow-lg w-full max-w-md mx-auto ring-2 ring-primary/20"
+              className="rounded-lg shadow-lg w-full max-w-sm mx-auto ring-2 ring-primary/20"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             />
@@ -68,7 +68,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="glass-card p-6 space-y-6"
+            className="glass-card p-4 md:p-6 space-y-4 md:space-y-6"
           >
             <h3 className="text-2xl font-bold mb-4 text-gray-100">FullStack Developer</h3>
             <p className="text-gray-300 mb-6">
@@ -78,8 +78,8 @@ const About = () => {
               memberikan solusi terbaik untuk setiap projek.
             </p>
             
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-3 rounded-lg bg-gray-800/30">
+            <div className="space-y-3 md:space-y-4">
+              <div className="flex items-center space-x-3 md:space-x-4 p-2 md:p-3 rounded-lg bg-gray-800/30">
                 <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20">
                   <i className="fas fa-user text-blue-400"></i>
                 </div>
@@ -89,7 +89,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-3 rounded-lg bg-gray-800/30">
+              <div className="flex items-center space-x-3 md:space-x-4 p-2 md:p-3 rounded-lg bg-gray-800/30">
                 <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-red-500/20">
                   <i className="fas fa-envelope text-red-400"></i>
                 </div>
@@ -99,7 +99,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-3 rounded-lg bg-gray-800/30">
+              <div className="flex items-center space-x-3 md:space-x-4 p-2 md:p-3 rounded-lg bg-gray-800/30">
                 <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-green-500/20">
                   <i className="fas fa-map-marker-alt text-green-400"></i>
                 </div>
