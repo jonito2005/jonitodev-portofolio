@@ -35,6 +35,7 @@ body {
 
 .glass-card {
   @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl shadow-xl;
+  padding: clamp(1rem, 3vw, 1.5rem);
 }
 
 /* Gradient text utility */
@@ -76,15 +77,16 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  margin-bottom: 1.5rem;
-  min-height: 4rem;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  min-height: 3rem;
   font-weight: 700;
+  line-height: 1.2;
   background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
   -webkit-background-clip: text;
   background-clip: text;
@@ -92,9 +94,10 @@ body {
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
   color: #a8b2d1;
-  min-height: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -151,13 +154,22 @@ body {
 }
 
 .lottie-container {
-  margin: 0 auto 2rem;
-  width: 400px;
-  height: 400px;
+  margin: 0 auto 1rem;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
+}
+
+/* Tambahkan media query untuk margin yang berbeda di desktop */
+@media (min-width: 768px) {
+  .lottie-container {
+    margin: 0 auto 2rem;
+  }
 }
 
 .navbar {
