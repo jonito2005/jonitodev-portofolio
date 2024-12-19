@@ -245,16 +245,17 @@ const HeroText = () => {
               preserveAspectRatio: 'xMidYMid slice'
             }}
             style={{ 
-              width: 400,
-              height: 400,
+              width: '100%',
+              maxWidth: '400px',
+              height: 'auto',
               margin: '0 auto'
             }}
           />
         </div>
-        <h1 ref={titleRef} className="hero-title relative z-10">
+        <h1 ref={titleRef} className="hero-title relative z-10 px-4 text-2xl md:text-4xl lg:text-5xl">
           &nbsp;
         </h1>
-        <h2 ref={subtitleRef} className="hero-subtitle relative z-10">
+        <h2 ref={subtitleRef} className="hero-subtitle relative z-10 px-4 text-lg md:text-xl lg:text-2xl">
           &nbsp;
         </h2>
       </div>
