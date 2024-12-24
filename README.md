@@ -29,7 +29,7 @@ Portfolio website interaktif yang dibangun dengan React dan GSAP untuk animasi y
 
 1. Clone repository
 ```bash
-git clone https://github.com/jonito2005/jonitodev-portfolio.git
+git clone https://github.com/jonito2005/jonitodev-portofolio.git
 cd jonitodev-portfolio
 ```
 
