@@ -1,0 +1,347 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hapus style default yang mungkin menyebabkan masalah layout */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @apply font-sans bg-gradient-to-br from-[#1a1b1f] to-[#2c2d35];
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #e5e7eb;
+}
+
+/* ScrollSmoother styles */
+#smooth-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#smooth-content {
+  width: 100%;
+  min-height: 100vh;
+  will-change: transform;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl shadow-xl;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+/* Optional: Tambahkan efek grain untuk tekstur */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hapus style yang tidak perlu */
+
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.5s;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  min-height: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  color: #a8b2d1;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Loading Animation Styles */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 1000;
+}
+
+.loader-text {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  letter-spacing: 0.2em;
+  animation: pulse 1.5s infinite;
+}
+
+.loader-bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader-progress {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  border-radius: 10px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.lottie-container {
+  margin: 0 auto 1rem;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* Tambahkan media query untuk margin yang berbeda di desktop */
+@media (min-width: 768px) {
+  .lottie-container {
+    margin: 0 auto 2rem;
+  }
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding-left: 1rem;
+}
+
+.logo-animation {
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+  padding-right: 1rem;
+}
+
+/* Hover effect */
+.nav-logo:hover .logo-animation {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-text {
+  background-position: right center;
+  transition: background-position 0.5s ease;
+}
+
+/* Kustomisasi Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4f46e5 #1a1a1a;
+}
+
+/* Styling untuk logo-logo melayang */
+.floating-logo-1 { animation-duration: 3s; }
+.floating-logo-2 { animation-duration: 4s; }
+.floating-logo-3 { animation-duration: 3.5s; }
+.floating-logo-4 { animation-duration: 4.5s; }
+.floating-logo-5 { animation-duration: 5s; }
+.floating-logo-6 { animation-duration: 3.8s; }
+.floating-logo-7 { animation-duration: 4.2s; }
+.floating-logo-8 { animation-duration: 3.7s; }
+.floating-logo-9 { animation-duration: 4.8s; }
+.floating-logo-10 { animation-duration: 3.3s; }
+.floating-logo-11 { animation-duration: 4.6s; }
+.floating-logo-12 { animation-duration: 3.9s; }
+.floating-logo-13 { animation-duration: 4.4s; }
+.floating-logo-14 { animation-duration: 3.6s; }
+.floating-logo-15 { animation-duration: 4.7s; }
+.floating-logo-16 { animation-duration: 3.4s; }
+.floating-logo-17 { animation-duration: 4.3s; }
+.floating-logo-18 { animation-duration: 3.8s; }
+.floating-logo-19 { animation-duration: 4.1s; }
+.floating-logo-20 { animation-duration: 3.5s; }
+.floating-logo-21 { animation-duration: 4.9s; }
+.floating-logo-22 { animation-duration: 3.2s; }
+.floating-logo-23 { animation-duration: 4.5s; }
+.floating-logo-24 { animation-duration: 3.7s; }
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(10px, -10px) rotate(5deg);
+  }
+  40% {
+    transform: translate(-5px, 15px) rotate(-3deg);
+  }
+  60% {
+    transform: translate(-15px, -5px) rotate(2deg);
+  }
+  80% {
+    transform: translate(5px, 10px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.floating-logo-1,
+.floating-logo-2,
+.floating-logo-3,
+.floating-logo-4,
+.floating-logo-5,
+.floating-logo-6,
+.floating-logo-7,
+.floating-logo-8,
+.floating-logo-9,
+.floating-logo-10,
+.floating-logo-11,
+.floating-logo-12,
+.floating-logo-13,
+.floating-logo-14,
+.floating-logo-15,
+.floating-logo-16,
+.floating-logo-17,
+.floating-logo-18,
+.floating-logo-19,
+.floating-logo-20,
+.floating-logo-21,
+.floating-logo-22,
+.floating-logo-23,
+.floating-logo-24 {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  will-change: transform;
+  transition: opacity 0.3s ease;
+}
+
+.floating-logo-1:hover,
+.floating-logo-2:hover,
+.floating-logo-3:hover,
+.floating-logo-4:hover,
+.floating-logo-5:hover,
+.floating-logo-6:hover,
+.floating-logo-7:hover,
+.floating-logo-8:hover,
+.floating-logo-9:hover,
+.floating-logo-10:hover,
+.floating-logo-11:hover,
+.floating-logo-12:hover,
+.floating-logo-13:hover,
+.floating-logo-14:hover,
+.floating-logo-15:hover,
+.floating-logo-16:hover,
+.floating-logo-17:hover,
+.floating-logo-18:hover,
+.floating-logo-19:hover,
+.floating-logo-20:hover,
+.floating-logo-21:hover,
+.floating-logo-22:hover,
+.floating-logo-23:hover,
+.floating-logo-24:hover {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+}
